@@ -1,0 +1,13 @@
+{
+  "name": "path-matching-server",
+  "version": "1.0.0",
+  "description": "Path matching server example",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "koa": "^2.14.2",
+    "koa-bodyparser": "^4.4.1"
+  }
+}
