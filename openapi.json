@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:5000",
+      "url": "http://localhost:3000",
       "description": "Local development server"
     }
   ],
@@ -71,7 +71,7 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "createdUser": {
+                  "newUser": {
                     "value": {
                       "id": "3",
                       "name": "Alice Johnson",
@@ -205,7 +205,7 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "updatedName": {
+                  "updateName": {
                     "value": {
                       "id": "1",
                       "name": "John Smith",
@@ -213,7 +213,7 @@
                       "updated_at": "2025-05-20T14:30:00Z"
                     }
                   },
-                  "updatedEmail": {
+                  "updateEmail": {
                     "value": {
                       "id": "1",
                       "name": "John Doe",
@@ -221,7 +221,7 @@
                       "updated_at": "2025-05-20T14:30:00Z"
                     }
                   },
-                  "updatedBoth": {
+                  "updateBoth": {
                     "value": {
                       "id": "1",
                       "name": "John Smith",
@@ -380,6 +380,35 @@
         }
       }
     },
+    "/products/popular": {
+      "get": {
+        "summary": "Returns a list of popular products on the platform",
+        "description": "Get all recently trending products",
+        "operationId": "getPopularProducts",
+        "responses": {
+          "200": {
+            "description": "A list of popular products",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "listProducts": {
+                    "value": {
+                      "products": [
+                        {
+                          "id": "p2",
+                          "name": "Smartphone",
+                          "price": 699.99
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/orders": {
       "post": {
         "summary": "Creates a new order",
@@ -416,7 +445,7 @@
             "content": {
               "application/json": {
                 "examples": {
-                  "createdOrder": {
+                  "newOrder": {
                     "value": {
                       "order_id": "o1",
                       "user_id": "1",

@@ -7,10 +7,10 @@ In this coding challenge, you will implement middleware for a server that dynami
 
 Write an HTTP server, create a middleware function that takes in a HTTP request and outputs an HTTP response.
 Your middleware should:
-1. Match an HTTP request to a route in the OpenAPI spec if it exists. 
+1. Match an HTTP request to a route in the OpenAPI spec if it exists.
 2. Outputs the corresponding response if the input matches one of the examples in the OpenAPI request.
-   1. If the request input doesn't exactly match any examples, then the server should return a 400 error.
-3. Your server should run on localhost:5000
+   1. If the request input doesn't exactly match any examples (by performing a strict comparison), then the server should return a 4xx error, defined in the responses for the endpoint. If no 4xx error is defined, then the server should return a 500 error.
+3. Your server should run on localhost:3000
 
 See the `openapi.json` file attached, as a sample spec that you should support.
 
