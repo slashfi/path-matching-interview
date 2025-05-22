@@ -16,7 +16,7 @@ cd nodejs
 npm start
 ```
 
-Server will run on http://localhost:5000
+Server will run on http://localhost:3000
 
 ## Python Server (FastAPI)
 
@@ -32,4 +32,4 @@ cd python
 python server.py
 ```
 
-Server will run on http://localhost:5000
+Server will run on http://localhost:3000
